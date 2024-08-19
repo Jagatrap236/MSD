@@ -1,0 +1,251 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: lightgray;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+header {
+    background: darkslategray; 
+    color: aliceblue; 
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 4px solid steelblue;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 5px 0 20px;
+    font-size: 1.3em;
+    color: lightsteelblue;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: aliceblue;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: steelblue;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 50px 30px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section h2 {
+    font-size: 2.5em;
+    border-bottom: 3px solid steelblue;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: darkslategray; 
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+section p {
+    line-height: 1.8;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+
+ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: darkslategray;
+    /padding: 15px;/
+    /background: aliceblue;/
+    /border-radius: 8px;/
+    /box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/
+}
+
+
+
+a {
+    color: steelblue; 
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: steelblue; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
+}
+
+footer {
+    background: darkslategray; 
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 60px;
+    font-size: 1em;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+:target {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#home:target {
+    animation: fadeInUp 1s forwards;
+}
+
+#about:target {
+    animation: slideInFromLeft 1s forwards;
+}
+
+#education:target {
+    animation: zoomIn 1s forwards;
+}
+
+#projects:target {
+    animation: rotateIn 1s forwards;
+}
+
+#skills:target {
+    animation: slideInFromRight 1s forwards;
+}
+
+#contact:target {
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+
+#skills {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: darkslategray; 
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+tr:hover {
+    background-color: lightgray; 
+}
+
+td {
+    font-size: 16px;
+    color: #333; 
+}
+
+table th, table td {
+    border: 1px solid #ddd; 
+}
